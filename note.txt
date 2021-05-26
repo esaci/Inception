@@ -1,0 +1,5 @@
+build les images Docker via docker-compose : 
+    1) Definir l'envirronement de chaque apllication par un Dockerfile
+    2) Creer les yaml pour definir quel service ils vont finir et comment
+    3) Lancer docker compose up et la commande pour demarrer la Docker compose puis lancer le tout.
+    4) 

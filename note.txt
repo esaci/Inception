@@ -3,3 +3,47 @@ build les images Docker via docker-compose :
     2) Creer les yaml pour definir quel service ils vont finir et comment
     3) Lancer docker compose up et la commande pour demarrer la Docker compose puis lancer le tout.
     4) 
+
+PID The process ID :
+    - 
+
+Nginx setup :
+ - chose suppr :
+            COPY src/sshd_config /etc/ssh/sshd_config 
+            /usr/sbin/sshd
+- TLS Transport layer security
+            -  openssl dhparam -outform pem -out /etc/nginx/ssl/dhparam2048.pem 2048
+
+
+
+-------------------------------------!!!!!!!!!!!!!!!---------------------------
+Vos volumes seront disponibles dans le dossier /home/login/data de la
+machine hôte utilisant Docker. Bien entendu, remplacez le "login" par
+le vôtre.
+
+Deux utilisateurs seront présents dans votre base de données WordPress, l’un d’eux
+étant le compte Admin. L’username de l’Admin ne devra pas comporter "admin"
+ou "Admin"
+
+Vos volumes seront disponibles dans le dossier /home/login/data de la
+machine hôte utilisant Docker. Bien entendu, remplacez le "login" par
+le vôtre.
+
+Pour des questions de lisibilité, il faudra configurer votre nom de domaine afin qu’il
+pointe vers votre adresse IP locale.
+Ce nom de domaine sera login.42.fr. A nouveau, vous utiliserez votre login.
+Par exemple, si votre login est wil, wil.42.fr redirigera vers l’adresse IP pointant vers
+le site web de wil.
+
+Le tag latest est interdit.
+Aucun mot de passe ne doit être présent dans vos Dockerfiles.
+L’utilisation des variables d’environnement est obligatoire.
+La mise en place d’un fichier .env afin de stocker vos variables
+d’environnement est fortement conseillée. Ce fichier devra être rangé
+à la racine de votre dossier srcs.
+Votre container NGINX doit être le seul point d’entrée de votre
+infrastructure par le port 443 uniquement en utilisant le protocole
+TLSv1.2 ou TLSv1.3.
+
+- systemctl stop nginx
+- http://192.168.3.83/

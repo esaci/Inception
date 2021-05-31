@@ -1,19 +1,11 @@
 FROM alpine:3.12.0
 
-RUN apk update && apk add bash nginx openssh openssl && adduser -D -g 'www' www && mkdir /www && chown -R www:www /var/lib/nginx && chown -R www:www /www
-
-COPY conf/esaci.html /var/www/esaci/htdocs/ 
-COPY conf/sshd_config /etc/ssh/sshd_config 
-COPY conf/nginx.conf /etc/nginx/nginx.conf 
-COPY conf/healthcheck.sh /tmp/. 
-COPY conf/start.sh /tmp/start.sh
-
-
-RUN addgroup sshgroup && adduser -D user && echo "user:password" | chpasswd
-
-RUN chmod +x /tmp/start.sh
 RUN mkdir -p /run/nginx
-
-EXPOSE 80 443
-
-CMD bash /tmp/start.sh
+RUN apk update \
+    && apk add openssl
+RUN apk -U add nginx
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/esaci.key -out /etc/ssl/certs/esaci.crt -subj '/C=FR/ST=75/L=Paris/O=42/OU=School/CN=esaci'
+COPY ./conf/esaci.html /var/www/html/esaci.html
+ADD conf/default /etc/nginx/conf.d/default.conf
+CMD     nginx;\
+        sleep infinity & wait

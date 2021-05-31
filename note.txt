@@ -11,8 +11,24 @@ Nginx setup :
  - chose suppr :
             COPY src/sshd_config /etc/ssh/sshd_config 
             /usr/sbin/sshd
+            RUN addgroup sshgroup && adduser -D user && echo "user:password" | chpasswd
+            ssh-keygen -A
+
+Dockerfile suppr :
+    RUN chmod +x /tmp/start.sh
+    RUN mkdir -p /run/nginx
+    COPY conf/esaci.html /var/www/esaci/htdocs/ 
+    COPY conf/sshd_config /etc/ssh/sshd_config 
+    COPY conf/nginx.conf /etc/nginx/nginx.conf 
+    COPY conf/healthcheck.sh /tmp/. 
+    COPY conf/start.sh /tmp/start.sh
+
 - TLS Transport layer security
             -  openssl dhparam -outform pem -out /etc/nginx/ssl/dhparam2048.pem 2048
+
+
+NGINX ULT :
+    a faire docker-compose up -d
 
 
 
@@ -47,3 +63,8 @@ TLSv1.2 ou TLSv1.3.
 
 - systemctl stop nginx
 - http://192.168.3.83/
+
+
+--------------------------
+        ssl_certificate         /etc/ssl/certs/esaci.crt;
+        ssl_certificate_key     /etc/ssl/certs/esaci.key;

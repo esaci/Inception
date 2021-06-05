@@ -5,7 +5,5 @@ services:
     container_name: e_nginx
     restart: always
     network_mode: "bridge"
-    volumes:
-      - ./wwwroot/:/var/www/
     build:
       context: .

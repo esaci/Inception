@@ -1,8 +1,18 @@
+docker-compose down
+docker rm -f $(docker ps -a -q)
+docker volume rm $(docker volume ls -q)
+
+/*/*/*/*/*/
+In this configuration, nginx first tests the IP address and port of the request against the listen directives of the server blocks. It then tests the “Host” header field of the request against the server_name entries of the server blocks that matched the IP address and port. If the server name is not found, the request will be processed by the default server. For example, a request for www.example.com received on the 192.168.1.1:80 port will be handled by the default server of the 192.168.1.1:80 port, i.e., by the first server, since there is no www.example.com defined for this port.
+
+As already stated, a default server is a property of the listen port, and different default servers may be defined for different ports:
+
 build les images Docker via docker-compose : 
     1) Definir l'envirronement de chaque apllication par un Dockerfile
     2) Creer les yaml pour definir quel service ils vont finir et comment
     3) Lancer docker compose up et la commande pour demarrer la Docker compose puis lancer le tout.
     4) 
+/*/*//*//*/
 
 PID The process ID :
     - 
@@ -68,3 +78,12 @@ TLSv1.2 ou TLSv1.3.
 --------------------------
         ssl_certificate         /etc/ssl/certs/esaci.crt;
         ssl_certificate_key     /etc/ssl/certs/esaci.key;
+        COPY ./conf/default.conf /etc/nginx/conf.d/
+            extra_hosts:
+        - "esaci.42.fr esaci:172.17.0.2"
+
+
+-----------------------------------------
+INFO :  /data/www contient les htm;
+        /data/image les images
+        

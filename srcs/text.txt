@@ -1,0 +1,621 @@
+Connexions Internet actives (serveurs et établies)
+Proto Recv-Q Send-Q Adresse locale          Adresse distante        Etat       PID/Program name    
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:6379          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:33021         0.0.0.0:*               LISTEN      -                   
+tcp        0      0 10.0.2.15:50866         104.18.22.110:443       ESTABLISHED 3397/chrome --type= 
+tcp        0      0 10.0.2.15:51618         173.194.76.188:5228     ESTABLISHED 3397/chrome --type= 
+tcp        0      0 10.0.2.15:58402         151.101.1.69:443        ESTABLISHED 3397/chrome --type= 
+tcp        0      0 10.0.2.15:35416         216.58.213.78:443       ESTABLISHED 3397/chrome --type= 
+tcp        0      0 10.0.2.15:33556         142.250.179.99:443      ESTABLISHED 3397/chrome --type= 
+tcp6       0      0 ::1:6379                :::*                    LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 ::1:631                 :::*                    LISTEN      -                   
+udp        0      0 0.0.0.0:41000           0.0.0.0:*                           -                   
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           -                   
+udp        0      0 127.0.0.1:45330         127.0.0.1:45330         ESTABLISHED -                   
+udp        0      0 0.0.0.0:631             0.0.0.0:*                           -                   
+udp        0      0 224.0.0.251:5353        0.0.0.0:*                           3397/chrome --type= 
+udp        0      0 224.0.0.251:5353        0.0.0.0:*                           3277/chrome         
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                           -                   
+udp6       0      0 :::43208                :::*                                -                   
+udp6       0      0 :::5353                 :::*                                -                   
+raw6       0      0 :::58                   :::*                    7           -                   
+Sockets du domaine UNIX actives (serveurs et établies)
+Proto RefCnt Flags       Type       State         I-Node   PID/Program name     Chemin
+unix  17     [ ]         DGRAM                    14054    -                    /run/systemd/journal/dev-log
+unix  2      [ ]         DGRAM                    14056    -                    /run/systemd/journal/syslog
+unix  2      [ ACC ]     STREAM     LISTENING     14058    -                    /run/systemd/fsck.progress
+unix  2      [ ACC ]     STREAM     LISTENING     14060    -                    /run/systemd/journal/stdout
+unix  8      [ ]         DGRAM                    14062    -                    /run/systemd/journal/socket
+unix  2      [ ]         DGRAM                    26691    2016/systemd         /run/user/1001/systemd/notify
+unix  2      [ ACC ]     SEQPACKET  LISTENING     14115    -                    /run/udev/control
+unix  2      [ ACC ]     STREAM     LISTENING     26694    2016/systemd         /run/user/1001/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     26698    2016/systemd         /run/user/1001/gnupg/S.dirmngr
+unix  2      [ ACC ]     STREAM     LISTENING     15198    -                    /run/uuidd/request
+unix  2      [ ACC ]     STREAM     LISTENING     26699    2016/systemd         /run/user/1001/gnupg/S.gpg-agent.browser
+unix  2      [ ACC ]     STREAM     LISTENING     15200    -                    /run/snapd.socket
+unix  2      [ ACC ]     STREAM     LISTENING     26700    2016/systemd         /run/user/1001/gnupg/S.gpg-agent
+unix  2      [ ACC ]     STREAM     LISTENING     15202    -                    /run/snapd-snap.socket
+unix  2      [ ACC ]     STREAM     LISTENING     26701    2016/systemd         /run/user/1001/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     26702    2016/systemd         /run/user/1001/bus
+unix  2      [ ACC ]     STREAM     LISTENING     15205    -                    /run/avahi-daemon/socket
+unix  2      [ ACC ]     STREAM     LISTENING     26703    2016/systemd         /run/user/1001/snapd-session-agent.socket
+unix  2      [ ACC ]     STREAM     LISTENING     26704    2016/systemd         /run/user/1001/gnupg/S.gpg-agent.extra
+unix  2      [ ACC ]     STREAM     LISTENING     26003    -                    /run/user/1001/keyring/control
+unix  2      [ ACC ]     STREAM     LISTENING     26152    -                    /run/user/1001/keyring/ssh
+unix  2      [ ACC ]     STREAM     LISTENING     18310    -                    @irqbalance534.sock
+unix  2      [ ACC ]     STREAM     LISTENING     15228    -                    /var/run/docker.sock
+unix  2      [ ACC ]     STREAM     LISTENING     26154    -                    /run/user/1001/keyring/pkcs11
+unix  2      [ ACC ]     STREAM     LISTENING     15230    -                    /var/run/dbus/system_bus_socket
+unix  2      [ ACC ]     STREAM     LISTENING     15232    -                    /run/cups/cups.sock
+unix  2      [ ACC ]     STREAM     LISTENING     15234    -                    /run/acpid.socket
+unix  2      [ ACC ]     STREAM     LISTENING     28068    2325/pulseaudio      /run/user/1001/pulse/native
+unix  2      [ ACC ]     STREAM     LISTENING     26888    2181/xfce4-session   @/tmp/.ICE-unix/2181
+unix  2      [ ACC ]     STREAM     LISTENING     25040    -                    @/tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     21633    -                    /run/NetworkManager/private-dhcp
+unix  2      [ ACC ]     STREAM     LISTENING     22049    -                    /var/run/postgresql/.s.PGSQL.5432
+unix  2      [ ACC ]     STREAM     LISTENING     23483    -                    /run/containerd/containerd.sock.ttrpc
+unix  2      [ ACC ]     STREAM     LISTENING     23484    -                    /run/containerd/containerd.sock
+unix  2      [ ACC ]     STREAM     LISTENING     23506    -                    /var/run/mysqld/mysqld.sock
+unix  2      [ ACC ]     STREAM     LISTENING     26131    -                    /tmp/ssh-uPDuWfVJYdhK/agent.2033
+unix  2      [ ACC ]     STREAM     LISTENING     26889    2181/xfce4-session   /tmp/.ICE-unix/2181
+unix  2      [ ACC ]     STREAM     LISTENING     33364    3277/chrome          /tmp/.com.google.Chrome.saPvNO/SingletonSocket
+unix  2      [ ACC ]     STREAM     LISTENING     31069    -                    /var/run/docker/metrics.sock
+unix  2      [ ACC ]     STREAM     LISTENING     29638    -                    /var/run/docker/libnetwork/fe92755ffbfc.sock
+unix  2      [ ACC ]     STREAM     LISTENING     26294    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         DGRAM                    14041    -                    /run/systemd/notify
+unix  3      [ ]         SEQPACKET  CONNECTE      33196    3277/chrome          @00016
+unix  2      [ ACC ]     STREAM     LISTENING     25041    -                    /tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     14044    -                    /run/systemd/private
+unix  3      [ ]         STREAM     CONNECTE      28945    2445/gvfs-goa-volum  
+unix  3      [ ]         STREAM     CONNECTE      18920    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      32147    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27668    -                    
+unix  3      [ ]         STREAM     CONNECTE      26518    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      28946    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      19831    -                    
+unix  3      [ ]         STREAM     CONNECTE      35642    3537/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27301    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      27229    2294/light-locker    
+unix  3      [ ]         STREAM     CONNECTE      21077    -                    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    29194    2500/obexd           
+unix  3      [ ]         STREAM     CONNECTE      27357    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      27212    2291/xfce4-power-ma  
+unix  3      [ ]         STREAM     CONNECTE      30755    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      27247    2203/xfsettingsd     
+unix  3      [ ]         STREAM     CONNECTE      27213    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      20301    -                    
+unix  3      [ ]         STREAM     CONNECTE      18612    -                    
+unix  3      [ ]         STREAM     CONNECTE      28135    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      27231    2294/light-locker    
+unix  3      [ ]         STREAM     CONNECTE      20060    -                    
+unix  3      [ ]         STREAM     CONNECTE      28954    2200/xfdesktop       
+unix  3      [ ]         STREAM     CONNECTE      27214    2291/xfce4-power-ma  
+unix  3      [ ]         STREAM     CONNECTE      18372    -                    
+unix  3      [ ]         STREAM     CONNECTE      29204    2500/obexd           
+unix  3      [ ]         STREAM     CONNECTE      27902    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26514    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      30758    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      31006    -                    
+unix  3      [ ]         STREAM     CONNECTE      27356    2317/xfce4-notifyd   
+unix  3      [ ]         STREAM     CONNECTE      27236    2181/xfce4-session   @/tmp/.ICE-unix/2181
+unix  3      [ ]         STREAM     CONNECTE      16449    -                    
+unix  3      [ ]         STREAM     CONNECTE      16425    -                    
+unix  3      [ ]         STREAM     CONNECTE      21076    -                    
+unix  3      [ ]         STREAM     CONNECTE      18439    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      28947    2445/gvfs-goa-volum  
+unix  3      [ ]         STREAM     CONNECTE      27321    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      26544    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26516    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      29122    2489/python          
+unix  3      [ ]         STREAM     CONNECTE      32149    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27251    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      27235    2200/xfdesktop       
+unix  3      [ ]         STREAM     CONNECTE      18899    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      16452    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      29193    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      35643    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      31010    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      27225    2294/light-locker    
+unix  3      [ ]         STREAM     CONNECTE      16426    -                    
+unix  3      [ ]         STREAM     CONNECTE      18613    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      28196    2456/gvfsd-trash     @/dbus-vfs-daemon/socket-gwh456rQ
+unix  3      [ ]         STREAM     CONNECTE      35640    3662/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27300    2317/xfce4-notifyd   
+unix  3      [ ]         STREAM     CONNECTE      27239    2200/xfdesktop       
+unix  3      [ ]         STREAM     CONNECTE      29124    2489/python          
+unix  3      [ ]         STREAM     CONNECTE      27977    2382/wrapper-1.0     
+unix  3      [ ]         STREAM     CONNECTE      27797    -                    
+unix  3      [ ]         STREAM     CONNECTE      27230    2294/light-locker    
+unix  3      [ ]         STREAM     CONNECTE      18831    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      29192    2500/obexd           
+unix  3      [ ]         STREAM     CONNECTE      26548    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      26515    2051/dbus-daemon     /run/user/1001/bus
+unix  2      [ ]         DGRAM                    16446    -                    
+unix  3      [ ]         STREAM     CONNECTE      32150    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      27245    2224/python3         
+unix  3      [ ]         STREAM     CONNECTE      26502    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      16448    -                    
+unix  3      [ ]         STREAM     CONNECTE      16430    -                    
+unix  3      [ ]         STREAM     CONNECTE      30827    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      20510    -                    
+unix  3      [ ]         STREAM     CONNECTE      35641    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      26495    2181/xfce4-session   @/tmp/.ICE-unix/2181
+unix  2      [ ]         DGRAM                    16424    -                    
+unix  3      [ ]         SEQPACKET  CONNECTE      33358    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      32132    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27104    2238/gvfsd           
+unix  3      [ ]         STREAM     CONNECTE      28895    2440/gvfs-afc-volum  
+unix  3      [ ]         STREAM     CONNECTE      28066    2325/pulseaudio      
+unix  3      [ ]         STREAM     CONNECTE      26961    2205/polkit-gnome-a  
+unix  3      [ ]         STREAM     CONNECTE      34058    3649/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27989    2387/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      26404    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  2      [ ]         DGRAM                    17241    -                    
+unix  3      [ ]         STREAM     CONNECTE      33844    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      33443    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      31070    -                    
+unix  3      [ ]         STREAM     CONNECTE      30834    2489/python          
+unix  3      [ ]         STREAM     CONNECTE      27125    2243/gvfsd-fuse      
+unix  3      [ ]         STREAM     CONNECTE      34019    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      28129    2051/dbus-daemon     /run/user/1001/bus
+unix  2      [ ]         DGRAM                    28064    2325/pulseaudio      
+unix  3      [ ]         STREAM     CONNECTE      26965    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      34088    3662/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28017    2389/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      27066    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26894    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         DGRAM                    26692    2016/systemd         
+unix  3      [ ]         STREAM     CONNECTE      34057    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      32146    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26469    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      28746    2389/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      28113    2289/python3         
+unix  3      [ ]         STREAM     CONNECTE      26974    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      27515    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26999    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26878    2185/xfconfd         
+unix  3      [ ]         STREAM     CONNECTE      26060    2016/systemd         
+unix  3      [ ]         SEQPACKET  CONNECTE      33886    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      33677    -                    
+unix  3      [ ]         STREAM     CONNECTE      30831    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      27209    2291/xfce4-power-ma  
+unix  3      [ ]         STREAM     CONNECTE      28812    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      34333    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      28094    2325/pulseaudio      
+unix  3      [ ]         STREAM     CONNECTE      26975    2205/polkit-gnome-a  
+unix  3      [ ]         STREAM     CONNECTE      27997    2387/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      26415    2202/nm-applet       
+unix  3      [ ]         STREAM     CONNECTE      26199    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26776    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      21997    -                    
+unix  3      [ ]         STREAM     CONNECTE      17348    -                    
+unix  3      [ ]         STREAM     CONNECTE      33900    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      34861    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      30830    2489/python          
+unix  3      [ ]         STREAM     CONNECTE      26499    2291/xfce4-power-ma  
+unix  3      [ ]         STREAM     CONNECTE      28854    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      28675    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      26962    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      27978    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26399    2206/update-notifie  
+unix  3      [ ]         STREAM     CONNECTE      26005    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      23030    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      33881    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      30828    2500/obexd           
+unix  3      [ ]         STREAM     CONNECTE      27063    2202/nm-applet       
+unix  3      [ ]         STREAM     CONNECTE      28853    2436/gvfs-gphoto2-v  
+unix  3      [ ]         STREAM     CONNECTE      16450    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      34286    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      28114    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      27211    2291/xfce4-power-ma  
+unix  3      [ ]         STREAM     CONNECTE      27994    2387/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      26392    2206/update-notifie  
+unix  2      [ ]         DGRAM                    26679    2016/systemd         
+unix  3      [ ]         STREAM     CONNECTE      17091    -                    
+unix  2      [ ]         DGRAM                    32489    -                    
+unix  3      [ ]         STREAM     CONNECTE      33440    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      29337    -                    /run/containerd/containerd.sock
+unix  3      [ ]         STREAM     CONNECTE      27126    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      28811    2432/gvfs-udisks2-v  
+unix  3      [ ]         STREAM     CONNECTE      34326    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      28725    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      26971    2214/dbus-daemon     
+unix  3      [ ]         STREAM     CONNECTE      28006    2389/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      27865    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      26491    2192/xfwm4           
+unix  3      [ ]         STREAM     CONNECTE      26178    2203/xfsettingsd     
+unix  3      [ ]         STREAM     CONNECTE      32476    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26996    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      34419    3747/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28134    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      18793    -                    
+unix  3      [ ]         STREAM     CONNECTE      34327    3788/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28172    2449/gvfs-mtp-volum  
+unix  3      [ ]         STREAM     CONNECTE      26972    2214/dbus-daemon     
+unix  3      [ ]         STREAM     CONNECTE      34094    3662/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28007    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26336    2219/at-spi2-regist  
+unix  3      [ ]         STREAM     CONNECTE      26930    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26879    -                    /run/systemd/journal/stdout
+unix  3      [ ]         SEQPACKET  CONNECTE      33887    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      29336    -                    
+unix  3      [ ]         STREAM     CONNECTE      31071    -                    /run/containerd/containerd.sock
+unix  3      [ ]         STREAM     CONNECTE      29205    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26500    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      35140    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      28856    2436/gvfs-gphoto2-v  
+unix  3      [ ]         STREAM     CONNECTE      15780    -                    
+unix  3      [ ]         STREAM     CONNECTE      34279    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      28095    2181/xfce4-session   @/tmp/.ICE-unix/2181
+unix  3      [ ]         STREAM     CONNECTE      26959    2205/polkit-gnome-a  
+unix  3      [ ]         STREAM     CONNECTE      27996    2387/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      26416    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      33676    -                    
+unix  3      [ ]         SEQPACKET  CONNECTE      33357    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      30832    2489/python          
+unix  3      [ ]         STREAM     CONNECTE      26995    2205/polkit-gnome-a  
+unix  3      [ ]         STREAM     CONNECTE      38171    4353/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28116    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      34280    3763/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28080    2325/pulseaudio      
+unix  3      [ ]         STREAM     CONNECTE      26225    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      28011    2389/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      27217    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26198    2198/Thunar          
+unix  3      [ ]         STREAM     CONNECTE      26174    2203/xfsettingsd     
+unix  3      [ ]         SEQPACKET  CONNECTE      33446    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28235    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      27102    2238/gvfsd           
+unix  3      [ ]         STREAM     CONNECTE      33901    3537/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28896    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      28061    2224/python3         
+unix  3      [ ]         STREAM     CONNECTE      26964    2209/at-spi-bus-lau  
+unix  3      [ ]         STREAM     CONNECTE      27516    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26393    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26153    -                    
+unix  3      [ ]         STREAM     CONNECTE      26880    2185/xfconfd         
+unix  2      [ ]         DGRAM                    18558    -                    
+unix  3      [ ]         STREAM     CONNECTE      32478    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      29100    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      27105    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      34018    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      28121    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      34313    3763/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28951    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      26967    2198/Thunar          
+unix  3      [ ]         STREAM     CONNECTE      28014    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26405    2202/nm-applet       
+unix  3      [ ]         STREAM     CONNECTE      26146    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      33360    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      32131    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27142    2206/update-notifie  
+unix  3      [ ]         STREAM     CONNECTE      28082    2325/pulseaudio      /run/user/1001/pulse/native
+unix  3      [ ]         STREAM     CONNECTE      34314    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      26494    2181/xfce4-session   @/tmp/.ICE-unix/2181
+unix  3      [ ]         STREAM     CONNECTE      28012    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      26501    2294/light-locker    
+unix  3      [ ]         STREAM     CONNECTE      26175    -                    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    26676    -                    
+unix  3      [ ]         STREAM     CONNECTE      33678    -                    
+unix  3      [ ]         STREAM     CONNECTE      33361    3397/chrome --type=  
+unix  2      [ ]         DGRAM                    31040    -                    
+unix  3      [ ]         STREAM     CONNECTE      30835    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      27143    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      21958    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      34008    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      28906    2440/gvfs-afc-volum  
+unix  3      [ ]         STREAM     CONNECTE      34271    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28081    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26297    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      34093    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      28013    2389/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      26335    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26868    2181/xfce4-session   
+unix  3      [ ]         STREAM     CONNECTE      26059    2016/systemd         
+unix  2      [ ]         DGRAM                    18627    -                    
+unix  3      [ ]         STREAM     CONNECTE      33679    -                    
+unix  3      [ ]         SEQPACKET  CONNECTE      33445    3413/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      30829    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      27103    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      34422    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      28813    2432/gvfs-udisks2-v  
+unix  3      [ ]         STREAM     CONNECTE      28124    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26973    2205/polkit-gnome-a  
+unix  3      [ ]         STREAM     CONNECTE      27990    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26400    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      26004    -                    
+unix  3      [ ]         DGRAM                    26693    2016/systemd         
+unix  3      [ ]         STREAM     CONNECTE      18116    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      34820    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      30731    2198/Thunar          
+unix  3      [ ]         STREAM     CONNECTE      26395    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      38170    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      28772    2289/python3         
+unix  3      [ ]         STREAM     CONNECTE      18794    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      34287    3763/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28123    2432/gvfs-udisks2-v  
+unix  3      [ ]         STREAM     CONNECTE      26473    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      34087    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27995    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      26403    2202/nm-applet       
+unix  3      [ ]         STREAM     CONNECTE      26881    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      26061    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      18309    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      37592    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27983    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      16183    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      32482    3411/chrome --type=  
+unix  2      [ ]         DGRAM                    21225    -                    
+unix  3      [ ]         STREAM     CONNECTE      26549    2291/xfce4-power-ma  
+unix  3      [ ]         STREAM     CONNECTE      34366    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      35336    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27497    2380/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      15319    -                    
+unix  3      [ ]         STREAM     CONNECTE      34235    3747/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      32483    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27901    2203/xfsettingsd     
+unix  3      [ ]         STREAM     CONNECTE      36198    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      34418    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      35337    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27508    2388/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      17678    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      16451    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      34242    3747/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      32379    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27838    2317/xfce4-notifyd   
+unix  3      [ ]         STREAM     CONNECTE      36188    3830/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      34391    3800/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      34865    3537/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      35784    3788/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27505    2382/wrapper-1.0     
+unix  2      [ ]         DGRAM                    714      -                    
+unix  3      [ ]         STREAM     CONNECTE      32460    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      26525    2299/dconf-service   
+unix  3      [ ]         STREAM     CONNECTE      34392    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27499    2384/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      19262    -                    
+unix  3      [ ]         STREAM     CONNECTE      32370    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      21979    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      27471    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      36197    3800/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      34423    3830/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27500    2051/dbus-daemon     /run/user/1001/bus
+unix  2      [ ]         STREAM     CONNECTE      18812    -                    
+unix  3      [ ]         DGRAM                    14043    -                    
+unix  3      [ ]         STREAM     CONNECTE      34234    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      32473    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      21689    -                    
+unix  3      [ ]         STREAM     CONNECTE      26504    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      20305    -                    
+unix  3      [ ]         STREAM     CONNECTE      27506    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      32486    3411/chrome --type=  
+unix  2      [ ]         DGRAM                    20124    -                    
+unix  3      [ ]         STREAM     CONNECTE      27227    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      34864    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      35785    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      28234    2461/gvfsd-metadata  
+unix  3      [ ]         STREAM     CONNECTE      16701    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      32459    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      20152    -                    
+unix  3      [ ]         STREAM     CONNECTE      26509    2299/dconf-service   
+unix  3      [ ]         STREAM     CONNECTE      20292    -                    
+unix  3      [ ]         STREAM     CONNECTE      37584    4353/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27498    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      19263    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      32378    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      21215    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      36187    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      35339    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      37583    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      36178    3747/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27504    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      32472    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      36179    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      18897    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      38159    3763/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27496    2384/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      32371    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26508    2299/dconf-service   
+unix  3      [ ]         STREAM     CONNECTE      36196    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      35329    3649/chrome --type=  
+unix  2      [ ]         STREAM     CONNECTE      20282    -                    
+unix  3      [ ]         STREAM     CONNECTE      37591    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      38158    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27501    2380/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      32475    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      26550    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      36195    3830/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      34367    3800/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27984    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      16525    -                    
+unix  3      [ ]         STREAM     CONNECTE      32474    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      20153    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      27365    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      34373    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      18904    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      28018    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      17677    -                    
+unix  3      [ ]         STREAM     CONNECTE      16407    -                    
+unix  3      [ ]         STREAM     CONNECTE      32485    3411/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27226    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      18658    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      34374    3800/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      35328    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27502    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      15984    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      34241    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      32377    3397/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      22994    -                    
+unix  3      [ ]         STREAM     CONNECTE      27920    2224/python3         
+unix  3      [ ]         STREAM     CONNECTE      35340    -                    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    26994    -                    
+unix  3      [ ]         STREAM     CONNECTE      27503    2384/wrapper-2.0     
+unix  3      [ ]         DGRAM                    14042    -                    
+unix  3      [ ]         STREAM     CONNECTE      34270    3662/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      32376    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27242    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      34334    3788/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      27510    2388/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      27492    2384/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      27548    2192/xfwm4           
+unix  3      [ ]         STREAM     CONNECTE      26933    2196/xfce4-panel     
+unix  3      [ ]         STREAM     CONNECTE      25943    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      33289    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26117    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      27545    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      22698    -                    
+unix  3      [ ]         STREAM     CONNECTE      15496    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      27400    2224/python3         
+unix  3      [ ]         STREAM     CONNECTE      28004    2181/xfce4-session   @/tmp/.ICE-unix/2181
+unix  3      [ ]         STREAM     CONNECTE      26493    2181/xfce4-session   @/tmp/.ICE-unix/2181
+unix  2      [ ]         DGRAM                    717      -                    
+unix  3      [ ]         STREAM     CONNECTE      33287    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26840    2134/VBoxClient      
+unix  3      [ ]         STREAM     CONNECTE      18907    -                    
+unix  3      [ ]         STREAM     CONNECTE      27541    2386/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      18570    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      17822    -                    
+unix  3      [ ]         STREAM     CONNECTE      28055    2411/indicator-mess  
+unix  3      [ ]         STREAM     CONNECTE      26218    2200/xfdesktop       
+unix  3      [ ]         STREAM     CONNECTE      28039    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26954    2198/Thunar          
+unix  3      [ ]         STREAM     CONNECTE      24860    -                    
+unix  3      [ ]         STREAM     CONNECTE      24805    -                    
+unix  3      [ ]         STREAM     CONNECTE      33277    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26104    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      27547    2051/dbus-daemon     /run/user/1001/bus
+unix  2      [ ]         DGRAM                    18333    -                    
+unix  3      [ ]         STREAM     CONNECTE      17446    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      27906    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26963    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      28193    2456/gvfsd-trash     
+unix  3      [ ]         STREAM     CONNECTE      26909    2192/xfwm4           
+unix  3      [ ]         STREAM     CONNECTE      25197    -                    
+unix  3      [ ]         STREAM     CONNECTE      15850    -                    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    14786    -                    
+unix  3      [ ]         SEQPACKET  CONNECTE      33189    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26763    2051/dbus-daemon     
+unix  3      [ ]         STREAM     CONNECTE      27512    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      17966    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      28674    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      28056    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26934    2051/dbus-daemon     /run/user/1001/bus
+unix  2      [ ]         DGRAM                    25534    -                    
+unix  3      [ ]         STREAM     CONNECTE      15983    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      26099    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      27511    2388/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      27975    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26998    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      28173    2449/gvfs-mtp-volum  
+unix  3      [ ]         DGRAM                    27319    -                    
+unix  3      [ ]         STREAM     CONNECTE      26179    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      24861    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         SEQPACKET  CONNECTE      33197    3289/chrome --type=  
+unix  3      [ ]         STREAM     CONNECTE      26866    2181/xfce4-session   
+unix  3      [ ]         STREAM     CONNECTE      27543    2386/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      18037    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      17445    -                    
+unix  3      [ ]         STREAM     CONNECTE      27837    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      26223    2200/xfdesktop       
+unix  3      [ ]         STREAM     CONNECTE      28958    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      25186    -                    
+unix  3      [ ]         STREAM     CONNECTE      24179    -                    /run/systemd/journal/stdout
+unix  3      [ ]         SEQPACKET  CONNECTE      33892    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26865    2181/xfce4-session   
+unix  3      [ ]         STREAM     CONNECTE      28000    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      27408    -                    
+unix  2      [ ]         DGRAM                    15209    -                    
+unix  3      [ ]         STREAM     CONNECTE      27361    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26224    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      18651    -                    
+unix  2      [ ]         DGRAM                    19669    -                    
+unix  3      [ ]         STREAM     CONNECTE      19639    -                    
+unix  3      [ ]         STREAM     CONNECTE      27563    2389/wrapper-2.0     
+unix  3      [ ]         DGRAM                    27318    -                    
+unix  3      [ ]         SEQPACKET  CONNECTE      33188    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      27539    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      19638    -                    
+unix  3      [ ]         STREAM     CONNECTE      27982    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      26333    2219/at-spi2-regist  
+unix  3      [ ]         STREAM     CONNECTE      28233    2461/gvfsd-metadata  
+unix  3      [ ]         STREAM     CONNECTE      26931    2203/xfsettingsd     
+unix  3      [ ]         STREAM     CONNECTE      24467    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      15771    -                    
+unix  3      [ ]         SEQPACKET  CONNECTE      33893    3277/chrome          
+unix  2      [ ]         DGRAM                    26772    2051/dbus-daemon     
+unix  3      [ ]         STREAM     CONNECTE      18908    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      27987    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      17965    -                    
+unix  3      [ ]         STREAM     CONNECTE      17516    -                    
+unix  3      [ ]         STREAM     CONNECTE      27360    2317/xfce4-notifyd   
+unix  3      [ ]         STREAM     CONNECTE      28194    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26492    2181/xfce4-session   @/tmp/.ICE-unix/2181
+unix  3      [ ]         STREAM     CONNECTE      25907    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      15849    -                    
+unix  3      [ ]         STREAM     CONNECTE      33278    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26774    2051/dbus-daemon     
+unix  3      [ ]         STREAM     CONNECTE      27513    2388/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      27468    2325/pulseaudio      
+unix  3      [ ]         STREAM     CONNECTE      28021    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26935    2196/xfce4-panel     
+unix  3      [ ]         STREAM     CONNECTE      26670    2016/systemd         
+unix  3      [ ]         STREAM     CONNECTE      25198    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         DGRAM                    14787    -                    
+unix  3      [ ]         STREAM     CONNECTE      32145    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26867    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      27544    2386/wrapper-2.0     
+unix  2      [ ]         DGRAM                    19694    -                    
+unix  3      [ ]         STREAM     CONNECTE      27858    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      26957    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      18652    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      27628    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      26885    2185/xfconfd         
+unix  3      [ ]         STREAM     CONNECTE      25541    -                    
+unix  3      [ ]         STREAM     CONNECTE      15772    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      33291    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26844    2141/VBoxClient      
+unix  3      [ ]         STREAM     CONNECTE      28003    2214/dbus-daemon     @/tmp/dbus-GELZbJTpUT
+unix  3      [ ]         STREAM     CONNECTE      21775    -                    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    14731    -                    
+unix  3      [ ]         STREAM     CONNECTE      27364    2317/xfce4-notifyd   
+unix  3      [ ]         STREAM     CONNECTE      26222    2200/xfdesktop       
+unix  3      [ ]         STREAM     CONNECTE      18569    -                    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTE      28174    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      26886    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      16353    -                    
+unix  3      [ ]         SEQPACKET  CONNECTE      33349    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26143    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      27546    2386/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      18036    -                    
+unix  3      [ ]         STREAM     CONNECTE      16354    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      27495    2380/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      26266    2209/at-spi-bus-lau  
+unix  3      [ ]         STREAM     CONNECTE      27627    2411/indicator-mess  
+unix  3      [ ]         STREAM     CONNECTE      26171    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      33286    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26062    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      27538    2388/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      17824    -                    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTE      14725    -                    
+unix  3      [ ]         STREAM     CONNECTE      27973    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26219    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      28673    2411/indicator-mess  
+unix  3      [ ]         STREAM     CONNECTE      26955    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      21957    -                    
+unix  3      [ ]         STREAM     CONNECTE      33290    -                    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTE      26853    2153/VBoxClient      
+unix  3      [ ]         STREAM     CONNECTE      27514    2051/dbus-daemon     /run/user/1001/bus
+unix  3      [ ]         STREAM     CONNECTE      27490    2380/wrapper-2.0     
+unix  3      [ ]         STREAM     CONNECTE      26334    2219/at-spi2-regist  
+unix  3      [ ]         STREAM     CONNECTE      27556    2224/python3         
+unix  3      [ ]         STREAM     CONNECTE      26932    2196/xfce4-panel     
+unix  3      [ ]         STREAM     CONNECTE      15982    -                    
+unix  3      [ ]         SEQPACKET  CONNECTE      33350    3277/chrome          
+unix  3      [ ]         STREAM     CONNECTE      26773    2051/dbus-daemon     

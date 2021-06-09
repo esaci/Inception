@@ -1,0 +1,18 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name esaci;
+    return 301 https://esaci.42.fr;
+}
+
+server {
+	listen 443 ssl ;
+	listen [::]:443 ssl ;
+	ssl_certificate /etc/ssl/certs/esaci.crt;
+	ssl_certificate_key /etc/ssl/certs/esaci.key;
+
+	root var/www/esaci.42.fr/html;
+	index esaci.html esaci.htm esaci.nginx-debian.html esaci.php esaci.sh;
+
+	server_name esaci;
+}

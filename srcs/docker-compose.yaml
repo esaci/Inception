@@ -1,11 +1,32 @@
 version: "3"
 services:
   nginx:
+    image: nginx
+    container_name: e_nginx
+    volumes:
+      - /var/www/esaci.42.fr/html:/home/esaci/data/html
     ports:
       - 80:80
       - 443:443
-    image: nginx:latest
-    container_name: e_nginx
     build:
       context: ./requirements/nginx/
-  
+  mysql:
+    image: mariadb
+    volumes:
+      - /var/www/esaci.42.fr/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql_root_pass
+      MYSQL_DATABASE: db_name
+      MYSQL_USER: user_name
+      MYSQL_PASSWORD: user_pass
+    restart: always
+  wordpress:
+    image: wordpress
+    container_name: e_wordpress
+    volumes:
+      - /var/www/esaci.42.fr/:/home/esaci/data/
+    ports:
+      - 5050:5050
+    build:
+      context: ./requirements/wordpress/
+

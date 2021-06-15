@@ -86,4 +86,41 @@ TLSv1.2 ou TLSv1.3.
 -----------------------------------------
 INFO :  /data/www contient les htm;
         /data/image les images
-        
+    
+
+MYSQL_ROOT_PASSWORD=0000
+WORDPRESS_DB_PASSWORD=0000
+MYSQL_USER=esaci
+WORDPRESS_DB_USER=esaci
+MYSQL_PASSWORD=esaci0
+MYSQL_DATABASE=wordpress
+WORDPRESS_DB_NAME=wordpress
+WORDPRESS_DB_HOST=mysql
+WORDPRESS_TABLE_PREFIX=wp_
+MYSQL_IP=https://172.19.0.1/:3306
+SERV_IP=172.19.0.1
+
+
+
+        location / {
+            # First attempt to serve request as file, then
+            # as directory, then fall back to displaying a 404.
+            try_files $uri $uri/ /index.php?$args;
+            }
+        location / {
+            proxy_pass  http://wordpress;
+            proxy_set_header Host $host;
+            proxy_redirect     off;
+        }
+ mysql:
+    image: mariadb
+    build:
+      context: ./requirements/mariadb/
+    volumes:
+      - /data/mysql:/var/lib/mysql
+    env_file: .env 
+    restart: always
+    volumes:
+      - /data/mysql:/var/lib/mysql
+    ports:
+      - 3306:3306

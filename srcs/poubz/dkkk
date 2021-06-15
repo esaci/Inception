@@ -1,28 +1,12 @@
 version: "3"
 services:
 
-  nginx:
-    image: nginx
-    container_name: e_nginx
-    network_mode: "host"
-    ports:
-      - 80:80
-    volumes:
-      - /home/esaci/data/html:/var/www/html
-      -  /home/esaci/data/nginx:/etc/nginx/conf.d
-    build:
-      context: ./requirements/nginx/
-    restart: always
   mysql:
     image: mariadb
-    container_name: e_mysql
-    network_mode: "host"
-    ports: 
-      - 3306
-    volumes:
-      - /home/esaci/data/mysql:/var/lib/mysql
     build:
       context: ./requirements/mariadb/
+    volumes:
+      - /home/esaci/data/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: mysql_root_pass
       MYSQL_DATABASE: db_name
@@ -31,13 +15,10 @@ services:
     restart: always
   wordpress:
     image: wordpress
-    container_name: e_wordpress
-    ports: 
-      - 5050
-    volumes:
-      - /home/esaci/data/html:/var/www/html
     build:
       context: ./requirements/wordpress/
+    volumes:
+      - /home/esaci/data/html:/var/www/html
     depends_on:
       - mysql
     environment:
@@ -47,8 +28,21 @@ services:
       WORDPRESS_DB_USER: user_name
       WORDPRESS_DB_PASSWORD: user_pass
       WORDPRESS_TABLE_PREFIX: wp_
+    links:
+      - mysql
     restart: always
-
+  nginx:
+    image: nginx
+    volumes:
+      - /home/esaci/data/html:/var/www/html
+      -  /home/esaci/data/nginx:/etc/nginx/conf.d
+    container_name: e_nginx
+    build:
+      context: ./requirements/nginx/
+    links:
+      - wordpress
+    ports:
+      - 8080:80
 
   
     

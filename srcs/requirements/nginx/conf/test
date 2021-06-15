@@ -1,0 +1,78 @@
+
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+
+	root /home/site/www;
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name _;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
+
+
+# Virtual Host configuration for example.com
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#
+#server {
+#	listen 80;
+#	listen [::]:80;
+#
+#	server_name example.com;
+#
+#	root /var/www/example.com;
+#	index index.html;
+#
+#	location / {
+#		try_files $uri $uri/ =404;
+#	}
+#}
+FROM alpine:3.12.0
+
+RUN apk update \
+    && apk upgrade \
+    && apk add bash \
+    && apk add openssl \
+    && apk add nginx \
+    && apk add openssh \
+    && mkdir -p /run/nginx
+CMD sudo mkdir -p /var/www/esaci.42.fr/html \
+    sudo chown -R 777 /var/www/esaci.42.fr/html \
+    sudo su - \
+    mkdir -p /eTLS/apps/ssl \
+    chmod 700 /eTLS/apps/ssl \
+    mkdir /etc/docker/ssl \
+    chmod 700 /etc/docker/ssl/
+
+RUN openssl genrsa -out /eTLS/apps/ssl/ca-key.pem 4096 \
+    && openssl req -x509 -new -nodes -key /eTLS/apps/ssl/ca-key.pem -days 3650 -out /eTLS/apps/ssl/ca.pem -subj -subj 'CN=certificat-auth'
+    && openssl genrsa -out /eTLS/apps/ssl/client-key.pem 4096 \
+    && openssl req -new -key /eTLS/apps/ssl/client-key.pem -out /eTLS/apps/ssl/client-cert.csr -subj '/CN=certif-client' -config /eTLS/apps/ssl/openssl.cnf \
+    && openssl x509 -req -in /eTLS/apps/ssl/client-cert.csr -CA /eTLS/apps/ssl/ca.pem -CAkey /eTLS/apps/ssl/ca-key.pem -CAcreateserial -out /eTLS/apps/ssl/client-cert.pem -days 3650 -extensions v3_req -extfile /eTLS/apps/ssl/openssl.cnf
+COPY conf/esaci.html /var/www/esaci.42.fr/html/esaci.html
+COPY conf/esaci.42.fr /etc/nginx/sites-available/esaci.42.fr
+COPY conf/nginx.conf /etc/nginx/nginx.conf
+CMD sudo ln -s /etc/nginx/sites-available/esaci.42.fr /etc/nginx/sites-enabled/
+
+
+EXPOSE 80 443 30022
+
+
+CMD nginx;\
+    sleep infinity & wait
+
+  db:
+    image: mysql
+    container_name: e_db
+    env_file: .env
+    environment:
+      - MYSQL_DATABASE=wordpress
+    volumes:
+      - dbdata:/var/lib/mysql
+    command: '--default-authentication-plugin=mysql_native_password'

@@ -17,7 +17,8 @@ rm:  ## Stop and remove running containers
 	docker-compose -f $(APP_NAME) down
 logs nginx :
 	docker-compose -f $(APP_NAME) logs nginx
-
+reset :
+	rm -rf /home/esaci/data/*
 re : rm up
 
 

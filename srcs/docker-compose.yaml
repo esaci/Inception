@@ -16,7 +16,6 @@ services:
   mysql:
     image: mariadb
     container_name: e_mysql
-    network_mode: "host"
     ports: 
       - 3306
     volumes:
@@ -41,7 +40,7 @@ services:
     depends_on:
       - mysql
     environment:
-      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_HOST: elias
       MYSQL_ROOT_PASSWORD: mysql_root_pass
       WORDPRESS_DB_NAME: db_name
       WORDPRESS_DB_USER: user_name

@@ -1,6 +1,7 @@
 docker-compose down
 docker rm -f $(docker ps -a -q)
 docker volume rm $(docker volume ls -q)
+docker image rm $(docker image ls) 
 
 /*/*/*/*/*/
 In this configuration, nginx first tests the IP address and port of the request against the listen directives of the server blocks. It then tests the “Host” header field of the request against the server_name entries of the server blocks that matched the IP address and port. If the server name is not found, the request will be processed by the default server. For example, a request for www.example.com received on the 192.168.1.1:80 port will be handled by the default server of the 192.168.1.1:80 port, i.e., by the first server, since there is no www.example.com defined for this port.
@@ -124,3 +125,22 @@ SERV_IP=172.19.0.1
       - /data/mysql:/var/lib/mysql
     ports:
       - 3306:3306
+
+  mysql:
+    image: mariadb
+    container_name: e_mysql
+    ports: 
+      - 3306
+    volumes:
+      - /home/esaci/data/mysql:/var/lib/mysql
+    build:
+      context: ./requirements/mariadb/
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql_root_pass
+      MYSQL_DATABASE: db_name
+      MYSQL_USER: user_name
+      MYSQL_PASSWORD: user_pass
+    restart: always
+
+    depends_on:
+      - mysql

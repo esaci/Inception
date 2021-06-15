@@ -9,4 +9,5 @@ COPY /conf/start.sh /usr/sbin
 RUN chmod +x /usr/sbin/start.sh
 EXPOSE 5050
 
-CMD /usr/sbin/start.sh
+CMD /usr/sbin/start.sh;  \
+    sleep infinity && wait

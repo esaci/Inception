@@ -4,22 +4,48 @@ services:
   nginx:
     image: nginx
     container_name: e_nginx
-    network_mode: "host"
     ports:
       - 80:80
     volumes:
-      - /home/esaci/data/html:/var/www/html
+      - esacidata:/var/www/html
       -  /home/esaci/data/nginx:/etc/nginx/conf.d
     build:
       context: ./requirements/nginx/
+    depends_on:
+      - wordpress
     restart: always
+    networks:
+        esacicorp:
+          aliases:
+            - nginx
+  wordpress:
+    image: wordpress
+    container_name: e_wordpress
+    ports:
+      - 5050:5050
+    volumes:
+      - "esacidata:/var/www/html"
+    build:
+      context: ./requirements/wordpress/
+    depends_on:
+      - mysql
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      MYSQL_ROOT_PASSWORD: mysql_root_pass
+      WORDPRESS_DB_NAME: db_name
+      WORDPRESS_DB_USER: user_name
+      WORDPRESS_DB_PASSWORD: user_pass
+      WORDPRESS_TABLE_PREFIX: wp_
+    restart: always
+    networks:
+          esacicorp:
+            aliases:
+              - wordpress
   mysql:
     image: mariadb
     container_name: e_mysql
-    ports: 
-      - 3306
-    volumes:
-      - /home/esaci/data/mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
     build:
       context: ./requirements/mariadb/
     environment:
@@ -28,26 +54,15 @@ services:
       MYSQL_USER: user_name
       MYSQL_PASSWORD: user_pass
     restart: always
-  wordpress:
-    image: wordpress
-    container_name: e_wordpress
-    ports: 
-      - 5050
-    volumes:
-      - /home/esaci/data/html:/var/www/html
-    build:
-      context: ./requirements/wordpress/
-    depends_on:
-      - mysql
-    environment:
-      WORDPRESS_DB_HOST: elias
-      MYSQL_ROOT_PASSWORD: mysql_root_pass
-      WORDPRESS_DB_NAME: db_name
-      WORDPRESS_DB_USER: user_name
-      WORDPRESS_DB_PASSWORD: user_pass
-      WORDPRESS_TABLE_PREFIX: wp_
-    restart: always
-
-
-  
-    
+    networks:
+          esacicorp:
+            aliases:
+              - mysql
+networks:
+     esacicorp:
+volumes:
+  esacidata:
+    driver: local
+    driver_opts:
+      type: bind
+      device: /home/esaci/data2/html

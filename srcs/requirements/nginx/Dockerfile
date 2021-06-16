@@ -19,5 +19,4 @@ CMD sudo ln -s /etc/nginx/sites-available/ /etc/nginx/sites-enabled/
 EXPOSE 80
 
 
-CMD nginx; \
-    sleep infinity && wait
+CMD ["nginx", "-g", "daemon off;"]

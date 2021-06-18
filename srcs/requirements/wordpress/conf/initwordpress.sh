@@ -7,7 +7,7 @@ if $(wp core is-installed);then
 	fi
 sleep 30
 
-wp core install --url=http://SERV_IP:5050 --title="ft_services" --admin_user=user --admin_password=password --admin_email=esaci@42.fr --skip-email
+wp core install --url=0.0.0.0:9000 --title="Inception" --admin_user=user --admin_password=password --admin_email=esaci@42.fr --skip-email
 wp term create category "Articles"
 
 wp user create user1 user1@example.com --role=editor --user_pass=pass

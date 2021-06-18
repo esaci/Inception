@@ -1,9 +1,12 @@
-FROM alpine:3.12.0
+FROM debian:buster
 
-RUN apk update && apk add mariadb mariadb-client
-RUN addgroup -S esaci && adduser -S elias -G esaci
-COPY conf/my.cnf /etc/my.cnf
-COPY conf/start.sh /tmp/start.sh
-COPY conf/initmysql.sh /tmp/
-EXPOSE 3306
-CMD /tmp/start.sh 
+RUN apt-get update && \
+	apt-get install -y mariadb-server
+
+COPY ./conf/esacimaria.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
+COPY conf/initdb.sql ./tmp/
+
+RUN service mysql start && \
+	mysql -u root --password= < /tmp/initdb.sql
+
+CMD mysqld

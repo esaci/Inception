@@ -1,68 +1,48 @@
-version: "3"
+version: '3'
 services:
-
   nginx:
-    image: nginx
-    container_name: e_nginx
-    ports:
-      - 80:80
-    volumes:
-      - esacidata:/var/www/html
-      -  /home/esaci/data/nginx:/etc/nginx/conf.d
-    build:
-      context: ./requirements/nginx/
+    build: requirements/nginx
     depends_on:
       - wordpress
+    container_name: nginx
     restart: always
-    networks:
-        esacicorp:
-          aliases:
-            - nginx
-  wordpress:
-    image: wordpress
-    container_name: e_wordpress
+    hostname: esaci.42.fr
+    domainname: esaci.42.fr
     ports:
-      - 5050:5050
+      - 443:443
     volumes:
-      - "esacidata:/var/www/html"
-    build:
-      context: ./requirements/wordpress/
+      - 'wordpress:/var/www/esaci/html/'
+    networks: 
+      docker-network:
+        aliases:
+            - esaci.42.fr
+  wordpress:
+    build: requirements/wordpress
     depends_on:
-      - mysql
-    environment:
-      WORDPRESS_DB_HOST: mysql
-      MYSQL_ROOT_PASSWORD: mysql_root_pass
-      WORDPRESS_DB_NAME: db_name
-      WORDPRESS_DB_USER: user_name
-      WORDPRESS_DB_PASSWORD: user_pass
-      WORDPRESS_TABLE_PREFIX: wp_
+      - mariadb
+    command: php -S 0.0.0.0:9000 -t /wordpress
     restart: always
+    volumes:
+      - 'wordpress:/var/www/esaci/html/wordpress/'
+    container_name: wordpress
     networks:
-          esacicorp:
-            aliases:
-              - wordpress
-  mysql:
-    image: mariadb
-    container_name: e_mysql
-    ports:
-      - 3306:3306
-    build:
-      context: ./requirements/mariadb/
-    environment:
-      MYSQL_ROOT_PASSWORD: mysql_root_pass
-      MYSQL_DATABASE: db_name
-      MYSQL_USER: user_name
-      MYSQL_PASSWORD: user_pass
+      - docker-network
+  mariadb:
+    build: requirements/mariadb
+    env_file: .env
+    container_name: mariadb
     restart: always
+    volumes:
+      - 'db:/var/lib/mysql'
     networks:
-          esacicorp:
-            aliases:
-              - mysql
+      - docker-network
+
 networks:
-     esacicorp:
+  docker-network:
+    driver: bridge
+
 volumes:
-  esacidata:
-    driver: local
-    driver_opts:
-      type: bind
-      device: /home/esaci/data2/html
+  db:
+    external: false
+  wordpress:
+    external: false

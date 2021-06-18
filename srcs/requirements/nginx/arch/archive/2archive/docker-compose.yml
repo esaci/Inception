@@ -1,0 +1,9 @@
+version: "3"
+services:
+  nginx:
+    image: e_nginx:latest
+    container_name: e_nginx
+    restart: always
+    network_mode: "bridge"
+    build:
+      context: .

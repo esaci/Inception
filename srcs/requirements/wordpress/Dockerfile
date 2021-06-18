@@ -1,13 +1,8 @@
-FROM alpine:3.12.0
+FROM debian:buster
 
-RUN apk update \
-    && apk add nginx php7 php7-bcmath php7-ctype php7-curl php7-fpm php7-gd php7-iconv php7-intl php7-json php7-mbstring php7-mcrypt php7-mysqlnd php7-opcache php7-openssl php7-pdo php7-pdo_mysql php7-mysqli php7-pdo_pgsql php7-pdo_sqlite php7-phar php7-posix php7-session php7-soap php7-xml php7-zip 
+RUN apt-get update && \
+	apt-get install -y wordpress
 
-RUN wget -P /tmp/ http://wordpress.org/latest.tar.gz && wget -P /tmp https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && chmod +x /tmp/wp-cli.phar && mv /tmp/wp-cli.phar /usr/sbin/wp 
+COPY conf/wordpress/ /wordpress/
 
-COPY /conf/start.sh /usr/sbin
-RUN chmod +x /usr/sbin/start.sh
-EXPOSE 5050
-
-CMD /usr/sbin/start.sh;  \
-    sleep infinity && wait
+CMD sleep infinity && wait

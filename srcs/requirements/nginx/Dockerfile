@@ -1,22 +1,15 @@
-FROM alpine:3.12.0
+FROM debian:buster
 
-RUN apk update \
-    && apk upgrade \
-    && apk add bash \
-    && apk add openssl \
-    && apk add nginx \
-    && apk add openssh \
-    && mkdir -p /run/nginx
-CMD sudo mkdir -p /var/www/esaci.42.fr/html \
-    sudo chown -R 777 /var/www/esaci.42.fr/html 
+RUN apt-get update && \
+	apt-get install -y nginx openssl
 
-RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/esaci.key -out /etc/ssl/certs/esaci.crt -subj '/C=FR/ST=75/L=Paris/O=42/OU=School/CN=esaci'
-COPY conf/esaci.html /var/www/html/esaci.html
-COPY conf/nginx.conf /etc/nginx/nginx.conf
-CMD sudo ln -s /etc/nginx/sites-available/ /etc/nginx/sites-enabled/
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+	-subj "/C=FR/ST=France/L=Paris/O=42/CN=esaci.42.fr" \
+	-keyout /etc/ssl/private/esaci.key -out /etc/ssl/certs/esaci.crt
 
-
-EXPOSE 80
-
+#COPY conf/nginx.conf /etc/nginx/
+COPY conf/esaci /etc/nginx/sites-available/
+COPY conf/index.html /var/www/esaci/html/
+RUN ln -sf /etc/nginx/sites-available/esaci /etc/nginx/sites-enabled/
 
 CMD ["nginx", "-g", "daemon off;"]

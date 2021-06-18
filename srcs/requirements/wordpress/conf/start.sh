@@ -1,5 +1,6 @@
 #!/bin/sh
 
+addgroup -S esaci && adduser -S elias -G esaci
 mkdir -p /run/nginx
 mkdir -p /usr/share/webapps
 tar -xzf /tmp/latest.tar.gz  -C /usr/share/webapps/
@@ -14,7 +15,22 @@ mv  ./wp-config-sample.php wp-config.php
 sed -i "s/database_name_here/wordpress/" wp-config.php
 sed -i "s/password_here/password/" wp-config.php
 sed -i "s/username_here/user/" wp-config.php
+sed -i "s/localhost/0.0.0.0:3306/" wp-config.php
+
+su -s /bin/sh -c "initwordpress.sh" nginx
 
 nginx
 php-fpm7
 
+
+while sleep 20;
+do
+	if ! pgrep "nginx"
+	then
+		exit 1
+	fi
+	if ! pgrep "php-fpm"
+	then
+		exit 1
+	fi
+done

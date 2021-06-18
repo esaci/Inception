@@ -19,7 +19,8 @@ logs nginx :
 	docker-compose -f $(APP_NAME) logs nginx
 reset :
 	rm -rf /home/esaci/data/*
-re : rm up
+re : rm build
+	docker-compose -f $(APP_NAME) up
 
 
 

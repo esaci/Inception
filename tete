@@ -9,8 +9,8 @@
 
 <ul>
 	<li><a href="http://elias.saci.42.fr:9000">elias</a></li>
-	<li><a href="http://172.19.0.4:9000">wordpress</a></li>
-	<li><a href="http://172.19.0.3:9000/">nginxip</a></li>
+	<li><a href="batman">wordpress</a></li>
+	<li><a href="http://172.19.0.2:9000/">nginxip</a></li>
 </ul>
 </body>
 </html>

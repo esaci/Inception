@@ -3,24 +3,24 @@
 # DOCKER TASKS
 APP_NAME = srcs/docker-compose.yaml
 
-all: ## Clean the generated/compiles files
-	docker-compose -f $(APP_NAME) up --build  -d
-# Build the container
-build: ## Build the release and develoment container. The development
+all: build up
+
+build: 
 	docker-compose -f $(APP_NAME) build
 	
 
-up: ## Spin up the project
-	docker-compose -f $(APP_NAME) up --build
+up:
+	docker-compose -f $(APP_NAME) up -d
+	awk '{w=$1} END{print w}' hosts | 
 
-rm:  ## Stop and remove running containers
+rm:
 	docker-compose -f $(APP_NAME) down
+
 logs nginx :
 	docker-compose -f $(APP_NAME) logs nginx
 reset :
 	rm -rf /home/esaci/data/*
-re : rm build
-	docker-compose -f $(APP_NAME) up
+re : rm build up
 
 
 

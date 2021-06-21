@@ -5,4 +5,4 @@ RUN apt-get update && \
 
 COPY conf/wordpress/ /wordpress/
 
-CMD sleep infinity && wait
+RUN cp /etc/hosts /wordpress/

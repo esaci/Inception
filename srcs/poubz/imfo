@@ -1,0 +1,8 @@
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                                 NAMES
+5bf720ded7ad        nginx               "/bin/sh -c 'nginx; …"   4 minutes ago       Up 3 minutes        0.0.0.0:80->80/tcp, 0.0.0.0:443->443/tcp, 30022/tcp   e_nginx
+9c98b88a95a2        wordpress           "docker-entrypoint.s…"   4 minutes ago       Up 4 minutes        80/tcp                                                srcs_wordpress_1
+dc290787b1cb        mariadb             "docker-entrypoint.s…"   4 minutes ago       Up 4 minutes        3306/tcp                                              srcs_mysql_1
+
+nohup /tmp/init_mysql.sh &
+
+exec /usr/bin/mysqld --datadir="/var/lib/mysql/"

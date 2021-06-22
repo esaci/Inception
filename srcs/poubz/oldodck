@@ -1,0 +1,42 @@
+events {
+}
+
+http {
+    server {
+        listen      80;
+        listen      [::]:80;
+
+        return 301 https://$host$request_uri;
+    }
+
+    server {
+        listen      443         ssl;
+        listen      [::]:443    ssl;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        server_name             localhost;
+
+        ssl_certificate         /etc/ssl/certs/esaci.crt;
+        ssl_certificate_key     /etc/ssl/certs/esaci.key;
+
+        root                    /var/www/esaci.42.fr/html;
+        index                   esaci.html;
+        
+        location /wordpress {
+            return 307 wordpress;
+        }
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+        location ~ \.php$ {
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
+            fastcgi_pass wordpress:9000;
+            fastcgi_index index.php;
+            include fastcgi_params;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_param SCRIPT_NAME $fastcgi_script_name;
+        }
+    }
+    include /etc/nginx/sites-enabled/*;
+
+}

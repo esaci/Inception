@@ -1,0 +1,10 @@
+image: wordpress
+    container_name: e_wordpress
+    build:
+      context: ./requirements/wordpress/
+    volumes:
+      - /home/esaci/data/html:/var/www/html
+    env_file: .env
+    ports:
+      - 5050:5050
+    restart: always

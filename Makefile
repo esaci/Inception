@@ -1,26 +1,33 @@
-
-
-# DOCKER TASKS
 APP_NAME = srcs/docker-compose.yaml
 
-all: ## Clean the generated/compiles files
+all: build files up
 	docker-compose -f $(APP_NAME) up --build  -d
-# Build the container
-build: ## Build the release and develoment container. The development
+
+build:
 	docker-compose -f $(APP_NAME) build
-	
 
-up: ## Spin up the project
-	docker-compose -f $(APP_NAME) up --build
+files:
+	mkdir /home/esaci/data/wordpress || true
+	mkdir /home/esaci/data/mariadb || true
 
-rm:  ## Stop and remove running containers
-	docker-compose -f $(APP_NAME) down
-logs nginx :
-	docker-compose -f $(APP_NAME) logs nginx
-reset :
-	rm -rf /home/esaci/data/*
-re : rm build
+clean:
+	docker-compose -f $(APP_NAME) down -v
+	rm -rf /home/esaci/data/wordpress || true
+	rm -rf /home/esaci/data/mariadb || true
+
+fclean: clean
+	docker rm -f $(docker ps -a -q) || true
+	docker volume rm $(docker volume ls -q) || true
+	docker image rm $(docker image ls -q) || true
+
+up:
 	docker-compose -f $(APP_NAME) up
+
+rm:
+	docker-compose -f $(APP_NAME) down
+
+re : rm build
+	docker-compose -f $(APP_NAME) up -d
 
 
 

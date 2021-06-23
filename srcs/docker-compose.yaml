@@ -3,45 +3,46 @@ services:
   mariadb:
     build: requirements/mariadb
     env_file: .env
-    container_name: mariadb
-    restart: always
+    image: mariadb
+    container_name: e_mariadb
+    restart: unless-stopped
     volumes:
       - 'db:/var/lib/mysql'
     networks:
       - docker-network
   wordpress:
     build: requirements/wordpress
-    depends_on:
-      - mariadb
-    command: php -S 0.0.0.0:9000 -t /var/www/wordpress
-    restart: always
+    env_file: .env
+    image: wordpress
+    container_name: e_wordpress
+    restart: unless-stopped
     volumes:
-      - 'wordpress:/var/www/wordpress/'
-    container_name: wordpress
+        - 'wordpress:/var/www/wordpress/'
     networks:
-      - docker-network
+        - docker-network
+    command: php -S 0.0.0.0:9000 -t /var/www/wordpress
+    depends_on:
+        - mariadb
   nginx:
     build: requirements/nginx
-    depends_on:
-      - wordpress
-    container_name: nginx
-    restart: always
-    domainname: esaci.42.fr
+    env_file: .env
+    image: nginx
+    container_name: e_nginx
+    restart: unless-stopped
+    volumes:
+        - wordpress:/var/www/wordpress/
+    networks:
+        docker-network:
     ports:
       - 443:443
-    volumes:
-      - wordpress:/var/www/esaci/
-    networks: 
-      docker-network:
-        aliases:
-            - esaci.42.fr
-  
-  
+    depends_on:
+        - wordpress
+
+
 
 networks:
   docker-network:
     driver: bridge
-
 volumes:
   db:
     driver: local
@@ -53,5 +54,5 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/esaci/data/nginx
+      device: /home/esaci/data/wordpress
       o: bind

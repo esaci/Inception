@@ -1,21 +1,17 @@
 server {
 	listen 443 ssl ;
 	listen [::]:443 ssl ;
-	
+
 	ssl_certificate /etc/ssl/certs/esaci.crt;
 	ssl_certificate_key /etc/ssl/private/esaci.key;
 
-	root /var/www/esaci/html;
-
-	index index.html index.htm index.nginx-debian.html index.php;
-
-    # server_name localhost www.localhost;
-	location ~ .php$ {
-		fastcgi_pass wordpress:9000;
-		include snippets/fastcgi-php.conf;
-	}
-
-	location /wordpress {
-		proxy_pass http://wordpress:9000;
+	location / {
+		root /var/www/wordpress;
+		index index.php index.html;
+		location ~ \.php$ {
+			include fastcgi_params;
+			fastcgi_pass wordpress:9000;
+			fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		}
 	}
 }

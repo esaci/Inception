@@ -16,9 +16,7 @@ clean:
 	rm -rf /home/esaci/data/mariadb || true
 
 fclean: clean
-	docker rm -f $(docker ps -a -q) || true
-	docker volume rm $(docker volume ls -q) || true
-	docker image rm $(docker image ls -q) || true
+	@ docker rm -f $(docker ps -a -q);docker volume rm $(docker volume ls -q);docker image rm $(docker image ls -q)
 
 up:
 	docker-compose -f $(APP_NAME) up

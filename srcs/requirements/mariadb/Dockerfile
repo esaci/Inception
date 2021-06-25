@@ -1,12 +1,19 @@
-FROM debian:buster
+FROM alpine:3.12.0
 
-RUN apt-get update && \
-	apt-get install -y mariadb-server
+RUN apk update && apk add mariadb mariadb-client && apk add bash
 
-COPY ./conf/esacimaria.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
-COPY conf/initdb.sql ./tmp/
+RUN		mkdir  /run/mysqld && mkdir  -p /var/lib/mysql \
+		&& chown mysql:mysql /var/lib/mysql \
+		&& chown -R mysql:mysql /run/mysqld \
+		&& mariadb-install-db --user=mysql --datadir='/var/lib/mysql'
 
-RUN service mysql start && \
-	mysql -u root --password= < /tmp/initdb.sql
+COPY	conf/my.cnf /etc/my.cnf.d/mariadb-server.cnf
+RUN 	chown -R mysql:mysql /etc/my.cnf.d
 
-CMD mysqld
+COPY 	conf/start.sh /tmp/start.sh
+COPY	conf/initmysql.sh /tmp/initmysql.sh
+RUN		chown -R mysql:mysql /tmp/
+
+USER		mysql
+
+ENTRYPOINT	[ "sh", "/tmp/start.sh" ]

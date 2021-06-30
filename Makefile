@@ -25,7 +25,7 @@ rm:
 	docker-compose -f $(APP_NAME) down
 
 re : rm build
-	docker-compose -f $(APP_NAME) up -d
+	docker-compose -f $(APP_NAME) up 
 
 
 

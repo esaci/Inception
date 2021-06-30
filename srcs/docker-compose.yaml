@@ -8,8 +8,6 @@ services:
     restart: unless-stopped
     volumes:
       - 'db:/var/lib/mysql'
-    networks:
-      - docker-network
   wordpress:
     build: requirements/wordpress
     env_file: .env
@@ -18,8 +16,6 @@ services:
     restart: unless-stopped
     volumes:
         - 'wordpress:/var/www/wordpress/'
-    networks:
-        - docker-network
     depends_on:
         - mariadb
   nginx:
@@ -30,8 +26,6 @@ services:
     restart: unless-stopped
     volumes:
         - wordpress:/var/www/wordpress/
-    networks:
-        - docker-network
     ports:
       - 443:443
     depends_on:
@@ -39,9 +33,6 @@ services:
 
 
 
-networks:
-  docker-network:
-    driver: bridge
 volumes:
   db:
     driver: local

@@ -1,8 +1,18 @@
 #! /bin/bash
 
+set -e
+
+if [ ! -f "wp-config.php" ]; then
+	printf "Seems like wordpress volume is missing something. Let's try to solve the problem!\n"
+	if ! wp core download; then
+		printf "core was installed, but config was missing.\n"
+	fi
+	cp -r /var/www/wordpress/conf/wp-config.php .
+fi
+
 while !( mariadb -h mariadb -P 3306 -u wordpress -p wordpress); do
 		sleep 1
-		printf " Toujours pas connecte..."
+		printf " Toujours pas connecte...\n"
 	done
 printf "Connection etablie.\n"
 

@@ -15,5 +15,6 @@ COPY    ./conf/wordpress /var/www/wordpress/
 COPY    ./conf/wp-config.php /var/www/wordpress/
 RUN 	chmod +x /tmp/start.sh
 
+WORKDIR         /var/www/wordpress/
 
 ENTRYPOINT		[ "bash", "/tmp/start.sh" ]

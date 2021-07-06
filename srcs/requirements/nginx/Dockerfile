@@ -1,21 +1,13 @@
-FROM	alpine:3.13.4
+FROM debian:buster
 
-RUN 		apk -U upgrade && apk add	nginx	\
-										openssl
+RUN apt-get update && \
+	apt-get install -y nginx openssl
 
-COPY		./config/nginx.default.conf /etc/nginx/conf.d/default.conf
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+	-subj "/C=FR/ST=France/L=Paris/O=42/CN=esaci.42.fr" \
+	-keyout /etc/ssl/private/esaci.key -out /etc/ssl/certs/esaci.crt
 
-RUN			mkdir /run/nginx &&	\
-			chown nginx:nginx /run/nginx
+COPY conf/esaci /etc/nginx/conf.d/default.conf
+COPY conf/index.html /var/www/esaci/
 
-ENV			CERTS_DIR=/etc/openssl	\
-			DOMAIN_NAME=localhost	\
-			PHP_FPM_HOST=php-fpm	\
-			PHP_FPM_PORT=9000		\
-			TLS_VERSION=1.3
-
-COPY		./scripts/entrypoint.sh /entrypoint.sh
-
-EXPOSE		443
-
-ENTRYPOINT	[ "sh", "entrypoint.sh" ]
+CMD ["nginx", "-g", "daemon off;"]

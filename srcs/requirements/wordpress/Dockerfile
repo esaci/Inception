@@ -17,7 +17,7 @@ RUN         wget -P /tmp https://raw.githubusercontent.com/wp-cli/builds/gh-page
 
 WORKDIR     /var/www/wordpress
 
-COPY        ./conf/wordpress ./
+RUN				wp core download
 
 ENV				MARIADB_DATABASE="wordpress"			\
 				MARIADB_USER="wordpress"				\
@@ -25,16 +25,12 @@ ENV				MARIADB_DATABASE="wordpress"			\
 				MARIADB_HOST="mariadb"					\
 				MARIADB_PORT=3306						
 
-RUN         addgroup -S nginx && adduser -S nginx
-RUN		    mkdir /var/log/phpmodif
+RUN         	addgroup -S nginx && adduser -S nginx
+RUN				mkdir /var/log/php-fpm 
+COPY			./conf/php-fpm.conf /etc/php7/php-fpm.conf
+COPY			./conf/www.conf /etc/php7/php-fpm.d/www.conf
 
-COPY	    ./conf/www.conf /etc/php7/php-fpm.d/www.conf
-COPY	    ./conf/php-fpm.conf /etc/php7/php-fpm.conf
-
-COPY	    ./conf/start.sh /tmp/start.sh
-RUN 	    chmod +x /tmp/start.sh
-
-
-COPY        ./conf/wp-config.php /var/www/wordpress/
+COPY			./conf/wp-config.php ./
+COPY			./conf/start.sh /tmp/start.sh
 
 ENTRYPOINT		[ "bash", "/tmp/start.sh" ]

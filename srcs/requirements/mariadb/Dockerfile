@@ -15,6 +15,7 @@ COPY	conf/initmysql.sh /tmp/initmysql.sh
 RUN		chown -R mysql:mysql /tmp/
 
 USER		mysql
-WORKDIR 
+
+WORKDIR /var/www/wordpress/
 
 ENTRYPOINT	[ "sh", "/tmp/start.sh" ]

@@ -2,7 +2,7 @@
 
 
 count=0
-while !( mariadb -h mariadb -P 3306 -u wordpress -p wordpress); do
+while ! mariadb -h$MARIADB_HOST -P${MARIADB_PORT} -u$MARIADB_USER -p$MARIADB_PASSWORD; do
 		if [ $count -gt 60 ]; then
 			printf "Erreur connection\n"
 			exit 1

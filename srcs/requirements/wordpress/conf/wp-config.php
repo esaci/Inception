@@ -1,16 +1,4 @@
 <?php
-
-////////////// REDIS CACHE CONFIGURATION //////////////
-
-define( 'WP_REDIS_HOST', getenv('REDIS_HOST') );
-define( 'WP_REDIS_PORT', getenv('REDIS_PORT') );
-// define( 'WP_REDIS_PASSWORD', 'secret' );
-define( 'WP_REDIS_TIMEOUT', 1 );
-define( 'WP_REDIS_READ_TIMEOUT', 1 );
-
-// change the database for each site to avoid cache collisions
-define( 'WP_REDIS_DATABASE', 0 );
-
 // supported clients: `phpredis`, `credis`, `predis` and `hhvm`
 // define( 'WP_REDIS_CLIENT', 'phpredis' );
 
@@ -67,15 +55,15 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',          '5 bUJ! Abwi`fVi]m @{xG4H8PrV]SUGZ(tv|Ftm*fREqFbULLhb{]*ws3@*f6@v' );
-define( 'SECURE_AUTH_KEY',   '=@T]2klj|fdFFTX%=TOz.24g!+JowL80eE*.V^As&yf!`n1sR/aQ6$%U;m pkGg~' );
-define( 'LOGGED_IN_KEY',     ',taYT5;G9h,szQI*pL!I(crmZd A_s]7v{Tdb;aI$)uiE@E@G<3h7+Xx$BP<|x3.' );
-define( 'NONCE_KEY',         '<Q!eAe0lE]4d/vR<(c<Q{LC;``cpgtGU+nXbE404A3Pa,_x19Y3vM:zlG>z>}EH4' );
-define( 'AUTH_SALT',         'FCe^.Ty(kE-}u.(ypP-PjY2oObjA/;GYvu!uW/QEW~.}e:_qo<^xu+w!IVskPzMO' );
-define( 'SECURE_AUTH_SALT',  '`qax~/)LV*eWMAei&7hdPk(48SzjH7#B~%s+4D$-VllVhKt`OmsZ0 QNjr+D>8>D' );
-define( 'LOGGED_IN_SALT',    '#|)oje#WL|ExO)Amh&`W!UNue./>geFrLT;ImPiL_ LVR14bVtr5<zE*pPJqg}9V' );
-define( 'NONCE_SALT',        'h!|cNIh3LtpSx=T5jtijczjW*-VLT{,Jq;x)&_&0pGlh/) %64jJi$-LVz3yR,b=' );
-define( 'WP_CACHE_KEY_SALT', '~*_>jszh*-u4}}fQc668jlt9~/?8~AW7P%t F.[Ev{;/nDVi7 cJd3oag1-PkoKT' );
+define( 'AUTH_KEY',         	'gkhfdkjg gfdkngkjdfngkjdfngkdfngdfgdf]][][][]876456546gfdg45elias' );
+define( 'SECURE_AUTH_KEY',  	'564987698456k45jh6j54h6i45hghhfghfhgfhfghfg77777676h67h6h76helias' );
+define( 'LOGGED_IN_KEY',    	'54hiug8745g745mg4h67h67h67h6fdgdfgfdgdfgderrtykhghki77h67h76elias' );
+define( 'NONCE_KEY',        	'g45jg484gn48ng4gh76h667h6fdh6544^*&43934324]]]]fdgfdgfd76h67elias' );
+define( 'AUTH_SALT',        	'gjk45hgjk4i89g54gn4k4gh67h67h67hiug8745g74h67h67hiug8745gh67elias' );
+define( 'SECURE_AUTH_SALT', 	'g;jfgj956hgfhgfhplh5h67h67h67h67h67hcxcxzczxczxczxczxcz67h67elias' );
+define( 'LOGGED_IN_SALT',   	'hfghfghfgpohi869hj679hj698j6798hj98j6xzczxcc67h67h67h67h67h6elias' );
+define( 'NONCE_SALT',       	'iuyerw7548htkkkjthriethreiuht894589gh94948hggh498hgldjgingeoelias' );
+define( 'WP_CACHE_KEY_SALT',	'4k4gh67h67h67hiug8745g74h67h67hiug84k4gh67h67h67hiug8745g74h67has' );
 
 /**
  * WordPress Database Table prefix.

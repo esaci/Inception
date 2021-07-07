@@ -3,6 +3,8 @@ services:
   mariadb:
     env_file:
     - .env
+    networks:
+      - docker-network
     build: requirements/mariadb
     image: mariadb
     container_name: e_mariadb
@@ -12,6 +14,8 @@ services:
   wordpress:
     env_file:
     - .env
+    networks:
+      - docker-network
     build: requirements/wordpress
     image: wordpress
     container_name: e_wordpress
@@ -23,14 +27,10 @@ services:
   nginx:
     env_file:
     - .env
+    networks:
+      - docker-network
     build: requirements/nginx
     image: nginx
-    environment:
-      - DOMAIN_NAME=${DOMAIN_NAME}
-      - CERTS_DIR=${CERTS_DIR}
-      - TLS_VERSION=${TLS_VERSION}
-      - PHP_FPM_HOST=${PHP_FPM_HOST}
-      - PHP_FPM_PORT=${PHP_FPM_PORT}
     container_name: e_nginx
     restart: unless-stopped
     volumes:
@@ -41,6 +41,9 @@ services:
         - wordpress
 
 
+networks:
+  docker-network:
+    driver: bridge
 
 volumes:
   db:

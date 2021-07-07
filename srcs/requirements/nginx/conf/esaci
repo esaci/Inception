@@ -1,16 +1,16 @@
 server {
 	listen 443 ssl;
 	server_name localhost;
-	ssl_certificate /etc/ssl/certs/esaci.crt;
-	ssl_certificate_key /etc/ssl/private/esaci.key;
-	ssl_protocols TLSv1.3;
+	ssl_certificate SSL_CERTIF;
+	ssl_certificate_key SSL_KEY;
+	ssl_protocols TLSV;
 
 	location / {
 		root /var/www/wordpress;
 		index index.php index.html;
 		location ~ \.php$ {
 			include fastcgi_params;
-			fastcgi_pass wordpress:9000;
+			fastcgi_pass wordpress:WP_PORT;
 			fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 		}
 	}

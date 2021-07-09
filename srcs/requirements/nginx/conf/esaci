@@ -10,7 +10,7 @@ server {
 		index index.php index.html;
 		location ~ \.php$ {
 			include fastcgi_params;
-			fastcgi_pass wordpress:WP_PORT;
+			fastcgi_pass WP_NOM:WP_PORT;
 			fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 		}
 	}

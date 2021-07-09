@@ -10,5 +10,5 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 COPY conf/esaci /etc/nginx/conf.d/default.conf
 COPY conf/index.html /var/www/esaci/
 COPY conf/start.sh /tmp/start.sh
-RUn  bash /tmp/start.sh
-CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT	[ "sh", "/tmp/start.sh" ]
+

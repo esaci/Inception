@@ -20,4 +20,5 @@ COPY			./conf/wp-config.php /conf/
 COPY			./conf/start.sh /tmp/start.sh
 COPY			./conf/article1.txt /tmp/
 
+
 ENTRYPOINT		[ "bash", "/tmp/start.sh" ]

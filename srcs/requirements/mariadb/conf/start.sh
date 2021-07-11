@@ -3,7 +3,6 @@
 mariadbd &
 
 if ! mysqladmin --wait=30 ping; then
-	printf "Could not ping mariadb for 30 seconds, runtime configuration is not possible.\n"
 	exit 1
 fi
 
